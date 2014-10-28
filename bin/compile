@@ -40,6 +40,7 @@ echo "-----> Bundling PHP version $PHP_VERSION"
 curl --silent --max-time 60 --location "$PHP_URL" | tar xz
 
 # update config files
+mkdir -p /app/apache/conf/
 cp $LP_DIR/conf/httpd.conf /app/apache/conf/httpd.conf
 cp $LP_DIR/conf/php.ini php
 
